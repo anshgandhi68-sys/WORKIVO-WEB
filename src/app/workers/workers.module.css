@@ -88,8 +88,24 @@
 }
 
 .icon {
-  font-size: 48px;
-  margin-bottom: 24px;
+  width: 64px;
+  height: 64px;
+  background: rgba(140, 68, 62, 0.1);
+  border-radius: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto 24px;
+  transition: all 0.25s ease;
+}
+
+.card:hover .icon {
+  background: #8c443e;
+  transform: scale(1.08);
+}
+
+.card:hover .icon svg {
+  stroke: #ffffff !important;
 }
 
 .card h3 {
