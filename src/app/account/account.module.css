@@ -1,0 +1,255 @@
+.main {
+  padding: 60px 0;
+  min-height: calc(100vh - 200px);
+}
+
+.authGate {
+  text-align: center;
+  padding: 80px 24px;
+  background: var(--card);
+  border-radius: 26px;
+  box-shadow: 0 9px 0 #1d4a43, 0 26px 30px rgba(0, 0, 0, 0.05);
+  max-width: 500px;
+  margin: 0 auto;
+}
+
+.authGate h2 {
+  color: var(--g);
+  margin-bottom: 16px;
+}
+
+.authGate p {
+  margin-bottom: 24px;
+  color: var(--tx);
+  opacity: 0.8;
+}
+
+.demoWarning {
+  background: rgba(233, 132, 125, 0.1);
+  border: 1px solid var(--co);
+  color: var(--t);
+  padding: 16px;
+  border-radius: 12px;
+  margin-bottom: 32px;
+  font-size: 14px;
+}
+
+.accountLayout {
+  display: grid;
+  grid-template-columns: 280px 1fr;
+  gap: 40px;
+}
+
+.sidebar {
+  background: var(--card);
+  border-radius: 26px;
+  padding: 32px 24px;
+  box-shadow: 0 6px 0 #1d4a43, 0 12px 20px rgba(0, 0, 0, 0.05);
+  height: fit-content;
+}
+
+.userInfo {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-bottom: 32px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--line);
+}
+
+.avatar {
+  width: 48px;
+  height: 48px;
+  background: var(--co);
+  color: #2a1210;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 20px;
+  box-shadow: 0 3px 0 #9c4c47;
+}
+
+.userName {
+  font-weight: 700;
+  color: var(--g);
+}
+
+:global([data-theme="dark"]) .userName {
+  color: #8fd3c7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme="light"])) .userName {
+    color: #8fd3c7;
+  }
+}
+
+.userEmail {
+  font-size: 13px;
+  opacity: 0.7;
+}
+
+.sideNav {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.navItem {
+  padding: 12px 16px;
+  border-radius: 12px;
+  font-weight: 700;
+  color: var(--tx);
+  transition: background 0.2s, color 0.2s;
+}
+
+.navItem:hover {
+  background: var(--c);
+}
+
+.navItem.active {
+  background: var(--t);
+  color: #fff;
+}
+
+.signOutBtn {
+  margin-top: 16px;
+  padding: 12px 16px;
+  background: transparent;
+  border: none;
+  text-align: left;
+  color: var(--t);
+  font-weight: 700;
+  font-family: inherit;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+  border-radius: 12px;
+}
+
+.signOutBtn:hover {
+  background: rgba(143, 69, 63, 0.1);
+}
+
+.content {
+  background: var(--card);
+  border-radius: 26px;
+  padding: 40px;
+  box-shadow: 0 6px 0 #1d4a43, 0 12px 20px rgba(0, 0, 0, 0.05);
+}
+
+.pageHeader {
+  margin-bottom: 32px;
+}
+
+.pageHeader h1 {
+  font-size: 28px;
+  color: var(--g);
+  margin-bottom: 8px;
+}
+
+:global([data-theme="dark"]) .pageHeader h1 {
+  color: #8fd3c7;
+}
+
+@media (prefers-color-scheme: dark) {
+  :global(:root:not([data-theme="light"])) .pageHeader h1 {
+    color: #8fd3c7;
+  }
+}
+
+/* Forms in account */
+.formGroup {
+  margin-bottom: 24px;
+}
+
+.formGroup label {
+  display: block;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: var(--tx);
+}
+
+.input {
+  width: 100%;
+  padding: 14px 16px;
+  border-radius: 12px;
+  border: 2px solid var(--line);
+  background: transparent;
+  color: var(--tx);
+  font-family: inherit;
+  font-size: 16px;
+  transition: border-color 0.2s;
+}
+
+.input:focus {
+  outline: none;
+  border-color: var(--co);
+}
+
+.divider {
+  height: 1px;
+  background: var(--line);
+  margin: 32px 0;
+}
+
+/* Bookings list */
+.bookingCard {
+  border: 2px solid var(--line);
+  border-radius: 16px;
+  padding: 24px;
+  margin-bottom: 16px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 24px;
+}
+
+.bookingInfo h3 {
+  font-size: 20px;
+  margin-bottom: 8px;
+}
+
+.bookingMeta {
+  display: flex;
+  gap: 16px;
+  font-size: 14px;
+  opacity: 0.8;
+}
+
+.badge {
+  padding: 4px 12px;
+  border-radius: 20px;
+  font-size: 12px;
+  font-weight: 700;
+}
+
+.badge.upcoming {
+  background: var(--co);
+  color: #2a1210;
+}
+
+.badge.completed {
+  background: var(--lg);
+  color: #1f3b20;
+}
+
+.badge.cancelled {
+  background: var(--line);
+  color: var(--tx);
+}
+
+@media (max-width: 820px) {
+  .accountLayout {
+    grid-template-columns: 1fr;
+  }
+  .sidebar {
+    padding: 24px;
+  }
+  .content {
+    padding: 24px;
+  }
+}

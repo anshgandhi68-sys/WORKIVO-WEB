@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 120 120" fill="none">
+  <!-- Hot Air Balloon Icon in Coral Red (#FA5252) -->
+  <g fill="#FA5252">
+    <!-- Central rib -->
+    <path d="M60 12 C48 30, 48 68, 56.5 80 L63.5 80 C72 68, 72 30, 60 12 Z" />
+    <!-- Inner left rib -->
+    <path d="M56 13 C41.5 30, 39 67, 53.5 79.5 C43 66.5, 41.5 30, 56 13 Z" />
+    <!-- Outer left rib -->
+    <path d="M50.5 15 C28 30, 24 64, 47 77.5 C30 63.5, 29 30, 50.5 15 Z" />
+    <!-- Inner right rib -->
+    <path d="M64 13 C78.5 30, 81 67, 66.5 79.5 C77 66.5, 78.5 30, 64 13 Z" />
+    <!-- Outer right rib -->
+    <path d="M69.5 15 C92 30, 96 64, 73 77.5 C90 63.5, 91 30, 69.5 15 Z" />
+    
+    <!-- Collar ring -->
+    <rect x="51" y="83" width="18" height="5" rx="2.5" />
+    <!-- Basket -->
+    <path d="M53.5 90 H66.5 L64.5 99 C64 102, 56 102, 55.5 99 Z" />
+  </g>
+</svg>
