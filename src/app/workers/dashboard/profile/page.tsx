@@ -132,33 +132,65 @@ export default function ProfileServicesPage() {
             Select the services you are certified and equipped to perform.
           </p>
 
-          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(220px, 1fr))', gap: '12px', marginBottom: '24px' }}>
-            {allServiceOptions.map(svc => (
-              <label 
-                key={svc}
-                style={{
-                  display: 'flex',
-                  alignItems: 'center',
-                  gap: '12px',
-                  padding: '14px 18px',
-                  border: profile.selectedServices.includes(svc) ? '2px solid var(--co)' : '1.5px solid var(--line)',
-                  background: profile.selectedServices.includes(svc) ? 'rgba(233, 132, 125, 0.08)' : 'transparent',
-                  borderRadius: '14px',
-                  cursor: 'pointer',
-                  fontWeight: 700,
-                  fontSize: '14px',
-                  transition: 'all 0.2s'
-                }}
-              >
-                <input 
-                  type="checkbox" 
-                  checked={profile.selectedServices.includes(svc)}
-                  onChange={() => handleServiceToggle(svc)}
-                  style={{ width: '18px', height: '18px', accentColor: 'var(--co)' }}
-                />
-                <span>{svc}</span>
-              </label>
-            ))}
+          <div style={{ display: 'grid', gridTemplateColumns: 'repeat(auto-fit, minmax(240px, 1fr))', gap: '12px', marginBottom: '24px' }}>
+            {allServiceOptions.map(svc => {
+              const isChecked = profile.selectedServices.includes(svc);
+              return (
+                <label 
+                  key={svc}
+                  style={{
+                    display: 'flex',
+                    alignItems: 'center',
+                    justifyContent: 'space-between',
+                    gap: '12px',
+                    padding: '16px 20px',
+                    border: isChecked ? '2px solid #8c443e' : '1.5px solid var(--line)',
+                    background: isChecked ? 'rgba(140, 68, 62, 0.08)' : 'var(--card)',
+                    boxShadow: isChecked ? '0 4px 12px rgba(140, 68, 62, 0.1)' : 'none',
+                    borderRadius: '14px',
+                    cursor: 'pointer',
+                    fontWeight: 700,
+                    fontSize: '14px',
+                    color: 'var(--tx)',
+                    transition: 'all 0.2s'
+                  }}
+                >
+                  <span>{svc}</span>
+                  <input 
+                    type="checkbox" 
+                    checked={isChecked}
+                    onChange={() => handleServiceToggle(svc)}
+                    style={{ position: 'absolute', opacity: 0, pointerEvents: 'none' }}
+                  />
+                  <span 
+                    style={{
+                      width: '22px',
+                      height: '22px',
+                      borderRadius: '50%',
+                      border: isChecked ? '2px solid #8c443e' : '2px solid var(--line)',
+                      background: isChecked ? '#8c443e' : 'transparent',
+                      display: 'flex',
+                      alignItems: 'center',
+                      justifyContent: 'center',
+                      flexShrink: 0,
+                      transition: 'all 0.2s'
+                    }}
+                  >
+                    {isChecked && (
+                      <span 
+                        style={{
+                          width: '5px',
+                          height: '9px',
+                          border: 'solid #ffffff',
+                          borderWidth: '0 2.2px 2.2px 0',
+                          transform: 'rotate(45deg) translate(-1px, -1px)'
+                        }}
+                      />
+                    )}
+                  </span>
+                </label>
+              );
+            })}
           </div>
 
           <div className={styles.formGroup}>

@@ -236,16 +236,23 @@ export default function WorkerApplyPage() {
                       <div className={styles.formGroup}>
                         <label>What services do you provide?</label>
                         <div className={styles.servicesGrid}>
-                          {availableServices.map(service => (
-                            <label key={service} className={styles.serviceCheckbox}>
-                              <input 
-                                type="checkbox" 
-                                checked={formData.services.includes(service)}
-                                onChange={() => handleServiceToggle(service)}
-                              />
-                              <span>{service}</span>
-                            </label>
-                          ))}
+                          {availableServices.map(service => {
+                            const isChecked = formData.services.includes(service);
+                            return (
+                              <label 
+                                key={service} 
+                                className={`${styles.serviceCheckbox} ${isChecked ? styles.activeService : ''}`}
+                              >
+                                <span>{service}</span>
+                                <input 
+                                  type="checkbox" 
+                                  checked={isChecked}
+                                  onChange={() => handleServiceToggle(service)}
+                                />
+                                <span className={styles.circleIndicator} />
+                              </label>
+                            );
+                          })}
                         </div>
                       </div>
                       <div className={styles.formGroup}>
