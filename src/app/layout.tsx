@@ -1,6 +1,7 @@
 import type { Metadata } from "next";
 import { Comfortaa, Marcellus } from "next/font/google";
 import { Analytics } from "@vercel/analytics/next";
+import SmoothScroll from "@/components/SmoothScroll";
 import "./globals.css";
 
 const comfortaa = Comfortaa({
@@ -123,7 +124,9 @@ export default function RootLayout({
         />
       </head>
       <body className={`${comfortaa.variable} ${marcellus.variable}`}>
-        {children}
+        <SmoothScroll>
+          {children}
+        </SmoothScroll>
         <Analytics />
       </body>
     </html>
