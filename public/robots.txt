@@ -1,0 +1,11 @@
+# Allow Googlebot and all search engines to index icons and site content
+User-agent: *
+Allow: /
+Allow: /favicon.ico
+Allow: /favicon.svg
+Allow: /icon-192.png
+Allow: /icon-512.png
+Allow: /workivo-logo.png
+Allow: /og-image.png
+
+Sitemap: https://www.workivo.in/sitemap.xml
