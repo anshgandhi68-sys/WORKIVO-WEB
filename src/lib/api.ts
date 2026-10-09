@@ -175,6 +175,28 @@ export async function getServices(): Promise<ServiceRecord[]> {
 }
 
 /**
+ * Retrieves a single service by ID or slug from Supabase 'services' table
+ */
+export async function getServiceById(idOrSlug: string): Promise<ServiceRecord | null> {
+  try {
+    const { data, error } = await supabase
+      .from('services')
+      .select('*')
+      .eq('id', idOrSlug)
+      .maybeSingle();
+
+    if (error || !data) {
+      return null;
+    }
+
+    return data as ServiceRecord;
+  } catch (err) {
+    console.error('Failed to get service by id:', err);
+    return null;
+  }
+}
+
+/**
  * Retrieves guild workers from Supabase 'workers' table
  */
 export async function getWorkers(): Promise<WorkerRecord[]> {
