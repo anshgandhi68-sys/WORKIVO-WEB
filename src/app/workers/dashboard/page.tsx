@@ -65,7 +65,7 @@ export default function WorkerDashboardPage() {
       {/* Upcoming Jobs Preview */}
       <div className={styles.recentJobs}>
         <div style={{ display: 'flex', justifyContent: 'space-between', alignItems: 'center', marginBottom: '20px' }}>
-          <h2 style={{ fontSize: '22px', margin: 0, color: 'var(--g)' }}>Today's Scheduled Jobs</h2>
+          <h2 style={{ fontSize: '22px', margin: 0, color: 'var(--g)' }}>Today&apos;s Scheduled Jobs</h2>
           <Link href="/workers/dashboard/jobs" style={{ fontSize: '14px', fontWeight: 700, color: 'var(--co)', textDecoration: 'none' }}>
             View All Jobs →
           </Link>

@@ -47,7 +47,7 @@ export default async function ServiceDetailPage({ params }: { params: Promise<{ 
               Our experienced partners bring all necessary equipment and supplies.
             </p>
 
-            <h3 style={{ fontSize: '18px', marginBottom: '12px', color: 'var(--t)' }}>What's Included:</h3>
+            <h3 style={{ fontSize: '18px', marginBottom: '12px', color: 'var(--t)' }}>What&apos;s Included:</h3>
             <ul style={{ paddingLeft: '24px', marginBottom: '32px', opacity: 0.8, lineHeight: 1.6 }}>
               <li>Comprehensive assessment and consultation</li>
               <li>Professional execution of requested tasks</li>

@@ -39,10 +39,6 @@ export default function AccountLayout({
       
       <main className={styles.main}>
         <div className="container">
-          <div className={styles.demoWarning}>
-            <strong>Development Demo:</strong> Backend systems (Supabase) are not yet configured. Displaying mock data for layout purposes.
-          </div>
-          
           <div className={styles.accountLayout}>
             <aside className={styles.sidebar}>
               <div className={styles.userInfo}>

@@ -38,7 +38,7 @@ export default function WorkersLandingPage() {
                   </svg>
                 </div>
                 <h3>Set Your Own Rates</h3>
-                <p>You have full control over your pricing and the services you offer. Keep the lion's share of what you earn.</p>
+                <p>You have full control over your pricing and the services you offer. Keep the lion&apos;s share of what you earn.</p>
               </div>
               <div className={styles.card}>
                 <div className={styles.icon}>
