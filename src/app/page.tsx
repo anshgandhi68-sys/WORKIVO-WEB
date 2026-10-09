@@ -11,7 +11,6 @@ const services = [
     num: '01', 
     title: 'Electrician', 
     desc: 'Switches, wiring and fittings sorted safely, right in your home by verified electricians.', 
-    icon: '⚡', 
     color: '#f59e0b',
     img: '/images/services/electrician.jpg',
     rating: '4.9 (1.2k+ reviews)'
@@ -20,7 +19,6 @@ const services = [
     num: '02', 
     title: 'Home Cooking', 
     desc: 'A professional cook in your kitchen, for delicious everyday meals to special family gatherings.', 
-    icon: '🍳', 
     color: '#ef4444',
     img: '/images/services/chef.jpg',
     rating: '4.9 (850+ reviews)'
@@ -29,7 +27,6 @@ const services = [
     num: '03', 
     title: 'Barber at Home', 
     desc: 'Fresh haircuts and grooming in comfort without leaving your home or waiting in salon queues.', 
-    icon: '✂️', 
     color: '#8b5cf6',
     img: '/images/services/barber.jpg',
     rating: '4.8 (2.1k+ reviews)'
@@ -38,7 +35,6 @@ const services = [
     num: '04', 
     title: 'Nails & Beauty', 
     desc: 'Relaxing manicure, pedicure, and beauty care performed at home by certified specialists.', 
-    icon: '💅', 
     color: '#ec4899',
     img: '/images/services/beauty.jpg',
     rating: '4.9 (1.5k+ reviews)'
@@ -47,7 +43,6 @@ const services = [
     num: '05', 
     title: 'Furniture Repair', 
     desc: 'Wobbly chairs, custom fitting, and wooden furniture assembly fixed by experienced carpenters.', 
-    icon: '🪑', 
     color: '#f97316',
     img: '/images/services/carpenter.jpg',
     rating: '4.8 (940+ reviews)'
@@ -56,7 +51,6 @@ const services = [
     num: '06', 
     title: 'Plumbing', 
     desc: 'Leaks, taps, pipe replacements and drain blockages resolved cleanly and efficiently.', 
-    icon: '🔧', 
     color: '#06b6d4',
     img: '/images/services/plumbing.jpg',
     rating: '4.9 (1.8k+ reviews)'
@@ -65,7 +59,6 @@ const services = [
     num: '07', 
     title: 'Home Cleaning', 
     desc: 'Deep kitchen cleaning, dish washing, bathroom sanitization and full home refresh.', 
-    icon: '🧹', 
     color: '#10b981',
     img: '/images/services/cleaning.jpg',
     rating: '4.9 (3.4k+ reviews)'
@@ -74,7 +67,6 @@ const services = [
     num: '08', 
     title: 'AC Service', 
     desc: 'Air conditioner filter cleaning, gas refill, and cooling system maintenance.', 
-    icon: '❄️', 
     color: '#3b82f6',
     img: '/images/services/ac.jpg',
     rating: '4.8 (1.6k+ reviews)'
@@ -83,7 +75,6 @@ const services = [
     num: '09', 
     title: 'Packers & Movers', 
     desc: 'Careful packing, safe loading, and hassle-free household shifting by professional teams.', 
-    icon: '📦', 
     color: '#f59e0b',
     img: '/images/services/movers.jpg',
     rating: '4.9 (780+ reviews)'
@@ -92,7 +83,6 @@ const services = [
     num: '10', 
     title: 'Laundry', 
     desc: 'Washing, steam pressing and fabric care delivered fresh back to your doorstep.', 
-    icon: '👕', 
     color: '#6366f1',
     img: '/images/services/laundry.jpg',
     rating: '4.8 (1.1k+ reviews)'
@@ -110,7 +100,7 @@ const stats = [
   { value: '10,000+', label: 'Happy Customers' },
   { value: '500+', label: 'Verified Pros' },
   { value: '15+', label: 'Cities Covered' },
-  { value: '4.8★', label: 'Average Rating' },
+  { value: '4.8', label: 'Average Rating' },
 ];
 
 export default function Home() {
@@ -200,7 +190,6 @@ export default function Home() {
                   <div className={styles.cardImageContainer}>
                     <img src={svc.img} alt={svc.title} className={styles.cardImg} />
                     <div className={styles.cardBadgeFloating}>
-                      <span>{svc.icon}</span>
                       <span>Verified Workivo Pro</span>
                     </div>
                     <div className={styles.cardNumOverlay}>{svc.num}</div>
@@ -211,7 +200,7 @@ export default function Home() {
                       <p>{svc.desc}</p>
                     </div>
                     <div className={styles.cardFooter}>
-                      <span className={styles.ratingBadge}>★ {svc.rating}</span>
+                      <span className={styles.ratingBadge}>Rating: {svc.rating}</span>
                       <Link href={`/services/${svc.title.toLowerCase().replace(/[^a-z0-9]+/g, '-')}`} className={styles.cardBtn}>
                         Book Now →
                       </Link>

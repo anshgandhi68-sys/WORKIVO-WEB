@@ -8,16 +8,16 @@ import styles from './book.module.css';
 import { createBooking } from '@/lib/api';
 
 const availableServices = [
-  { id: 'electrician', name: '⚡ Electrician' },
-  { id: 'home-cooking', name: '🍳 Home Cooking' },
-  { id: 'barber-at-home', name: '✂️ Barber at Home' },
-  { id: 'nails-and-beauty', name: '💅 Nails & Beauty' },
-  { id: 'furniture-repair', name: '🪑 Furniture Repair & Assembly' },
-  { id: 'plumbing', name: '🔧 Plumbing Services' },
-  { id: 'home-cleaning', name: '🧹 Deep Home Cleaning' },
-  { id: 'ac-repair', name: '❄️ AC Service & Repair' },
-  { id: 'packers-and-movers', name: '📦 Packers & Movers' },
-  { id: 'laundry', name: '👕 Laundry & Dry Clean' },
+  { id: 'electrician', name: 'Electrician' },
+  { id: 'home-cooking', name: 'Home Cooking' },
+  { id: 'barber-at-home', name: 'Barber at Home' },
+  { id: 'nails-and-beauty', name: 'Nails & Beauty' },
+  { id: 'furniture-repair', name: 'Furniture Repair & Assembly' },
+  { id: 'plumbing', name: 'Plumbing Services' },
+  { id: 'home-cleaning', name: 'Deep Home Cleaning' },
+  { id: 'ac-repair', name: 'AC Service & Repair' },
+  { id: 'packers-and-movers', name: 'Packers & Movers' },
+  { id: 'laundry', name: 'Laundry & Dry Clean' },
 ];
 
 export default function BookPage() {
@@ -84,7 +84,6 @@ export default function BookPage() {
             <div className={styles.formCard}>
               {bookingStatus === 'success' ? (
                 <div className={styles.successState} style={{ textAlign: 'center', padding: '32px 16px' }}>
-                  <div style={{ fontSize: '54px', marginBottom: '16px' }}>🎉</div>
                   <h2 style={{ color: 'var(--g)', fontSize: '28px', marginBottom: '8px' }}>Booking Confirmed!</h2>
                   <p style={{ opacity: 0.8, fontSize: '15px', marginBottom: '20px' }}>
                     Your service appointment has been scheduled successfully.

@@ -10,7 +10,7 @@ export default function WorkerDashboardPage() {
       </header>
 
       <div className={styles.statusAlert}>
-        <h3>⚠️ Account Pending Verification</h3>
+        <h3>Account Pending Verification</h3>
         <p>Your application is currently being reviewed by our team. You will not receive job requests until your account is fully verified. This process usually takes 1-2 business days.</p>
       </div>
 

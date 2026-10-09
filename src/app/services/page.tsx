@@ -12,7 +12,6 @@ type Service = {
   title: string;
   category: string;
   shortDescription: string;
-  icon: string;
   img: string;
 };
 
@@ -23,7 +22,6 @@ const initialServices: Service[] = [
     title: 'Electrician',
     category: 'Repairs & Maintenance',
     shortDescription: 'Switches, wiring and fittings sorted safely in your home by verified electricians.',
-    icon: '⚡',
     img: '/images/services/electrician.jpg'
   },
   {
@@ -32,7 +30,6 @@ const initialServices: Service[] = [
     title: 'Home Cooking',
     category: 'Household Support',
     shortDescription: 'A professional cook in your kitchen, for delicious everyday meals to special family gatherings.',
-    icon: '🍳',
     img: '/images/services/chef.jpg'
   },
   {
@@ -41,7 +38,6 @@ const initialServices: Service[] = [
     title: 'Barber at Home',
     category: 'Grooming & Wellness',
     shortDescription: 'Fresh haircuts and grooming in comfort without leaving your home or waiting in salon queues.',
-    icon: '✂️',
     img: '/images/services/barber.jpg'
   },
   {
@@ -50,7 +46,6 @@ const initialServices: Service[] = [
     title: 'Nails & Beauty',
     category: 'Grooming & Wellness',
     shortDescription: 'Relaxing manicure, pedicure, and beauty care performed at home by certified specialists.',
-    icon: '💅',
     img: '/images/services/beauty.jpg'
   },
   {
@@ -59,7 +54,6 @@ const initialServices: Service[] = [
     title: 'Furniture Repair & Assembly',
     category: 'Carpentry & Assembly',
     shortDescription: 'Wobbly chairs, custom fitting, and wooden furniture assembly fixed by experienced carpenters.',
-    icon: '🪑',
     img: '/images/services/carpenter.jpg'
   },
   {
@@ -68,7 +62,6 @@ const initialServices: Service[] = [
     title: 'Plumbing Services',
     category: 'Repairs & Maintenance',
     shortDescription: 'Leaks, taps, pipe replacements and drain blockages resolved cleanly and efficiently.',
-    icon: '🔧',
     img: '/images/services/plumbing.jpg'
   },
   {
@@ -77,7 +70,6 @@ const initialServices: Service[] = [
     title: 'Deep Home Cleaning',
     category: 'Cleaning & Wash',
     shortDescription: 'Deep kitchen cleaning, dish washing, bathroom sanitization and full home refresh.',
-    icon: '🧹',
     img: '/images/services/cleaning.jpg'
   },
   {
@@ -86,7 +78,6 @@ const initialServices: Service[] = [
     title: 'AC Service & Repair',
     category: 'Repairs & Maintenance',
     shortDescription: 'Air conditioner filter cleaning, gas refill, and cooling system maintenance.',
-    icon: '❄️',
     img: '/images/services/ac.jpg'
   },
   {
@@ -95,7 +86,6 @@ const initialServices: Service[] = [
     title: 'Packers & Movers',
     category: 'Shifting & Relocation',
     shortDescription: 'Careful packing, safe loading, and hassle-free household shifting by professional teams.',
-    icon: '📦',
     img: '/images/services/movers.jpg'
   },
   {
@@ -104,7 +94,6 @@ const initialServices: Service[] = [
     title: 'Laundry & Dry Clean',
     category: 'Cleaning & Wash',
     shortDescription: 'Washing, steam pressing and fabric care delivered fresh back to your doorstep.',
-    icon: '👕',
     img: '/images/services/laundry.jpg'
   }
 ];
@@ -148,7 +137,6 @@ export default function ServicesPage() {
               <div key={service.id} className={styles.card}>
                 <div className={styles.cardImgWrap}>
                   <img src={service.img} alt={service.title} className={styles.cardImg} />
-                  <span className={styles.iconBadge}>{service.icon}</span>
                 </div>
                 <div className={styles.cardBody}>
                   <span className={styles.category}>{service.category}</span>

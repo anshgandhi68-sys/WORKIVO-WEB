@@ -8,16 +8,16 @@ import styles from './apply.module.css';
 import { submitWorkerApplication } from '@/lib/api';
 
 const availableServices = [
-  '⚡ Electrician',
-  '🍳 Home Cooking',
-  '✂️ Barber at Home',
-  '💅 Nails & Beauty',
-  '🪑 Furniture Repair & Assembly',
-  '🔧 Plumbing Services',
-  '🧹 Deep Home Cleaning',
-  '❄️ AC Service & Repair',
-  '📦 Packers & Movers',
-  '👕 Laundry & Dry Clean',
+  'Electrician',
+  'Home Cooking',
+  'Barber at Home',
+  'Nails & Beauty',
+  'Furniture Repair & Assembly',
+  'Plumbing Services',
+  'Deep Home Cleaning',
+  'AC Service & Repair',
+  'Packers & Movers',
+  'Laundry & Dry Clean',
 ];
 
 export default function WorkerApplyPage() {
@@ -94,7 +94,6 @@ export default function WorkerApplyPage() {
               {status === 'success' ? (
                 <div className={styles.resultState} style={{ textAlign: 'left', padding: '16px 0' }}>
                   <div style={{ textAlign: 'center', marginBottom: '24px' }}>
-                    <div style={{ fontSize: '56px', marginBottom: '12px' }}>⏳</div>
                     <span style={{ 
                       background: 'rgba(245, 158, 11, 0.12)', 
                       color: '#d97706', 
