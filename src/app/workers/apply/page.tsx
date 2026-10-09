@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import styles from './apply.module.css';
+import { submitWorkerApplication, isBackendConfigured } from '@/lib/api';
 
 export default function WorkerApplyPage() {
   const [step, setStep] = useState(1);
@@ -19,7 +20,6 @@ export default function WorkerApplyPage() {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [status, setStatus] = useState<'idle' | 'success' | 'error'>('idle');
-  const isBackendConfigured = false;
 
   const handleNext = (e: React.FormEvent) => {
     e.preventDefault();
@@ -43,15 +43,18 @@ export default function WorkerApplyPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate backend call
-    setTimeout(() => {
+    try {
+      const res = await submitWorkerApplication(formData);
       setIsSubmitting(false);
-      if (isBackendConfigured) {
+      if (res.success) {
         setStatus('success');
       } else {
         setStatus('error');
       }
-    }, 1500);
+    } catch {
+      setIsSubmitting(false);
+      setStatus('error');
+    }
   };
 
   const availableServices = [

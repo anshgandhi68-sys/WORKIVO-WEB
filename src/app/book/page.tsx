@@ -5,6 +5,7 @@ import Link from 'next/link';
 import Navigation from '@/components/Navigation';
 import Footer from '@/components/Footer';
 import styles from './book.module.css';
+import { createBooking, isBackendConfigured } from '@/lib/api';
 
 export default function BookPage() {
   const [step, setStep] = useState(1);
@@ -17,9 +18,6 @@ export default function BookPage() {
   
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [bookingStatus, setBookingStatus] = useState<'idle' | 'success' | 'error'>('idle');
-
-  // Simulated config check
-  const isBackendConfigured = false;
 
   const handleNext = (e: React.FormEvent) => {
     e.preventDefault();
@@ -34,15 +32,18 @@ export default function BookPage() {
     e.preventDefault();
     setIsSubmitting(true);
     
-    // Simulate backend call
-    setTimeout(() => {
+    try {
+      const res = await createBooking(formData);
       setIsSubmitting(false);
-      if (isBackendConfigured) {
+      if (res.success) {
         setBookingStatus('success');
       } else {
         setBookingStatus('error');
       }
-    }, 1500);
+    } catch {
+      setIsSubmitting(false);
+      setBookingStatus('error');
+    }
   };
 
   return (
