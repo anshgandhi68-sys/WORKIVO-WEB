@@ -1,5 +1,6 @@
 import type { Metadata } from "next";
 import { Comfortaa, Marcellus } from "next/font/google";
+import { Analytics } from "@vercel/analytics/next";
 import "./globals.css";
 
 const comfortaa = Comfortaa({
@@ -30,6 +31,7 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${comfortaa.variable} ${marcellus.variable}`}>
         {children}
+        <Analytics />
       </body>
     </html>
   );
