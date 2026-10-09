@@ -20,10 +20,6 @@ export default function WorkerDashboardLayout({
       
       <main className={styles.main}>
         <div className="container">
-          <div className={styles.demoWarning}>
-            <strong>Development Demo:</strong> Backend systems are not yet connected. This dashboard displays mock data.
-          </div>
-          
           <div className={styles.dashboardLayout}>
             <aside className={styles.sidebar}>
               <div className={styles.workerInfo}>
