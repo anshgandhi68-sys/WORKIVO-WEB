@@ -25,20 +25,20 @@ export const metadata: Metadata = {
   keywords: ["workivo", "home services", "electrician", "plumbing", "cleaning", "beautician", "cooking", "handyman", "appliance repair"],
   icons: {
     icon: [
-      { url: "/favicon.ico", sizes: "any" },
-      { url: "/icon-48.png", sizes: "48x48", type: "image/png" },
-      { url: "/icon-192.png", sizes: "192x192", type: "image/png" },
-      { url: "/icon-512.png", sizes: "512x512", type: "image/png" },
-      { url: "/favicon.svg", type: "image/svg+xml" },
+      { url: "/favicon.ico?v=3", sizes: "any" },
+      { url: "/icon-48.png?v=3", sizes: "48x48", type: "image/png" },
+      { url: "/icon-192.png?v=3", sizes: "192x192", type: "image/png" },
+      { url: "/icon-512.png?v=3", sizes: "512x512", type: "image/png" },
+      { url: "/favicon.svg?v=3", type: "image/svg+xml" },
     ],
-    shortcut: "/favicon.ico",
+    shortcut: "/favicon.ico?v=3",
     apple: [
-      { url: "/apple-touch-icon.png", sizes: "180x180", type: "image/png" },
+      { url: "/apple-touch-icon.png?v=3", sizes: "180x180", type: "image/png" },
     ],
     other: [
       {
         rel: "apple-touch-icon-precomposed",
-        url: "/apple-touch-icon.png",
+        url: "/apple-touch-icon.png?v=3",
       },
     ],
   },

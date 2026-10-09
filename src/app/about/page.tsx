@@ -12,9 +12,12 @@ export default function AboutPage() {
     <>
       <Navigation />
       <main style={{ maxWidth: 800, margin: '0 auto', padding: '64px 24px 96px' }}>
-        <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', color: 'var(--g)', marginBottom: 24 }}>
-          About Workivo
-        </h1>
+        <div style={{ display: 'flex', alignItems: 'center', gap: 16, marginBottom: 24 }}>
+          <img src="/workivo-logo.svg" alt="Workivo" style={{ height: 48, width: 'auto' }} />
+          <h1 style={{ fontSize: 'clamp(32px, 5vw, 48px)', color: 'var(--g)', margin: 0 }}>
+            About Workivo
+          </h1>
+        </div>
         <p style={{ fontSize: 18, marginBottom: 24, lineHeight: 1.8 }}>
           <strong style={{ color: 'var(--co)' }}>Small task, Big relief.</strong> That&apos;s the promise behind Workivo.
         </p>

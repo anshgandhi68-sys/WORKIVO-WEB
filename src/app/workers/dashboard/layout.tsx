@@ -23,7 +23,9 @@ export default function WorkerDashboardLayout({
           <div className={styles.dashboardLayout}>
             <aside className={styles.sidebar}>
               <div className={styles.workerInfo}>
-                <div className={styles.avatar}>WP</div>
+                <div className={styles.avatar}>
+                  <img src="/workivo-logo.svg" alt="Workivo Partner" className={styles.avatarLogo} />
+                </div>
                 <div>
                   <div className={styles.workerName}>Workivo Partner</div>
                   <div className={styles.statusBadge}>Pending Verification</div>
