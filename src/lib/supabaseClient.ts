@@ -9,7 +9,7 @@ const supabaseAnonKey =
   process.env.NEXT_PUBLIC_SUPABASE_PUBLISHABLE_KEY ||
   process.env.NEXT_PUBLIC_SUPABASE_ANON_KEY ||
   process.env.SUPABASE_PUBLISHABLE_KEY ||
-  'sb_publishable_MA0qP1APIohvZtjmbMGHLQ_EJbr8Elx';
+  'sb_publishable_uZI2ccJ8eMvNVb-F2AxqFw_U0U8coxp';
 
 /**
  * Standard Supabase client using public / publishable credentials.
